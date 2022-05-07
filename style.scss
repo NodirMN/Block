@@ -1,0 +1,63 @@
+body {
+    font-size: 5vw;
+    font-family: "VT323", monospace;
+    transform: skewx(0.1deg);
+
+    background: #010;
+    color: rgba(125, 213, 130, 0.5);
+    text-shadow: 0 0 2px rgba(125, 213, 130, 1), 0 0 12px rgba(125, 213, 130, 1);
+}
+
+.screen {
+    margin: auto;
+    width: 40ch;
+    //white-space: pre;
+    animation: glow 7s infinite alternate ease-in;
+}
+
+.screen>p {
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.border {
+    border: 1ch solid;
+}
+
+.pulse {
+    animation: pulse 1.5s ease-in;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+@keyframes pulse {
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 0.1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px rgba(125, 213, 130, 1), 0 0 12px rgba(125, 213, 130, 1);
+    }
+
+    to {
+        text-shadow: 0 0 1px rgba(125, 213, 130, 1), 0 0 6px rgba(125, 213, 130, 1);
+    }
+}
+ 
